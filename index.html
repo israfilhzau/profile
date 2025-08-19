@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Your Name – UX Design & Digital Accessibility</title>
+  <meta name="description" content="Creating accessible and user-friendly digital experiences. Specializing in UX design, accessibility, workshops, and mentoring." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta property="og:title" content="Your Name – UX Design & Digital Accessibility" />
+  <meta property="og:description" content="Creating accessible and user-friendly digital experiences. Specializing in UX design, accessibility, workshops, and mentoring." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    /* Smooth Scrolling Text Animation */
+    @keyframes marquee {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .animate-marquee {
+      animation: marquee 30s linear infinite;
+      white-space: nowrap; /* Prevents text from wrapping */
+    }
+  </style>
+</head>
+<body class="font-montserrat bg-gray-100 text-gray-800">
+
+  <!-- Left-Aligned Language Selector -->
+  <div class="fixed top-4 left-4 z-10">
+    <select id="language-switcher" class="bg-gradient-to-r from-blue-600 to-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 focus:outline-none">
+      <option value="en">English</option>
+      <option value="bn">বাংলা</option>
+      <option value="zh">中文</option>
+    </select>
+  </div>
+
+  <!-- Home Section with Background Image -->
+  <section id="home" class="bg-cover bg-center text-white py-16" style="background-image: url('nature.jpg');">
+    <div class="container mx-auto text-center px-4">
+      <!-- Image in Home Section -->
+      <img src="my_image.jpg" alt="Your Image" class="rounded-full w-40 h-40 mx-auto mb-6 shadow-xl transition-transform transform hover:scale-110 duration-500 ease-in-out" />
+
+      <!-- Text with Colorful Gradient (English by default) -->
+      <div id="home-content-en">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-red-400 to-pink-500 mb-6">
+          Welcome to My Portfolio
+        </h1>
+        <p class="text-lg md:text-2xl mb-6 leading-relaxed text-gray-200">
+          I'm an agriculturist focused on sustainable farming through genomics, bioinformatics, microbiology, soil science, plant breeding, and therapeutic phage technology.
+        </p>
+      </div>
+
+      <div id="home-content-bn" class="hidden">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-red-400 to-pink-500 mb-6">
+          আমার পোর্টফোলিওতে স্বাগতম
+        </h1>
+        <p class="text-lg md:text-2xl mb-6 leading-relaxed text-gray-200">
+          আমি একটি টেকসই কৃষি ব্যবস্থা তৈরি করার জন্য জেনোমিক্স, বায়োইনফর্মেটিক্স, মাইক্রোবায়োলজি, মাটি বিজ্ঞান, উদ্ভিদ প্রজনন, এবং থেরাপিউটিক ফেজ প্রযুক্তির উপর কাজ করি।
+        </p>
+      </div>
+
+      <div id="home-content-zh" class="hidden">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-red-400 to-pink-500 mb-6">
+          欢迎来到我的作品集
+        </h1>
+        <p class="text-lg md:text-2xl mb-6 leading-relaxed text-gray-200">
+          我是一名农学家，专注于通过基因组学、生物信息学、微生物学、土壤科学、植物育种和治疗性噬菌体技术推动可持续农业。
+        </p>
+      </div>
+
+      <!-- Moving Text (No Background) -->
+      <div class="overflow-hidden">
+        <div class="inline-block animate-marquee text-xl md:text-2xl font-semibold text-white">
+          I'm passionate about creating sustainable farming solutions for a better future. Let's collaborate and innovate!
+        </div>
+      </div>
+
+      <!-- Learn More Button -->
+      <a href="#about" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full shadow-xl hover:bg-blue-700 focus:ring-4 focus:ring-blue-500 transform hover:scale-105 transition-transform duration-300 mt-8">
+        Learn More
+      </a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="bg-white text-gray-800 py-16">
+    <div class="container mx-auto text-center px-4 max-w-4xl">
+      <h2 class="text-3xl md:text-4xl font-bold mb-8">About Me</h2>
+      
+      <p class="text-lg md:text-xl mb-6 leading-relaxed text-gray-600">
+        I am <strong>Israfil Hossen</strong>, a passionate and dedicated researcher with a strong academic foundation and a focus on advancing sustainable agricultural practices. I hold a PhD in Plant Nutrition (Soil Science) from the University of China Academy of Science (UCAS) China, MS in Food Science and Technology (Microbiology), and a Bachelor of Science in Agriculture. My research centers on the intricate relationships between soil health, plant nutrition, and microbial interactions, aiming to develop innovative solutions to enhance crop productivity and promote food security on a global scale.
+      </p>
+      
+      <p class="text-lg md:text-xl mb-6 leading-relaxed text-gray-600">
+        With a deep interest in bioinformatics and molecular biology, I utilize cutting-edge technologies to investigate genomic, transcriptomic, and microbial data, driving insights that inform more sustainable agricultural systems. By combining my interdisciplinary expertise with rigorous experimentation, I strive to contribute valuable knowledge that can transform agricultural practices and improve global food production, all while minimizing environmental impact.
+      </p>
+      
+      <a href="#projects" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 focus:ring-2 focus:ring-blue-600 transition-colors duration-300">View My Work</a>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="bg-gray-100 text-gray-800 py-16">
+    <div class="container mx-auto text-center px-4 max-w-6xl">
+      <h2 class="text-3xl md:text-4xl font-bold mb-8">My Research Publications</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Example publication cards - fix the HTML tags in your original data for bold tags -->
+        <div class="bg-white shadow-md rounded-lg p-6 text-left">
+          <h3 class="text-xl font-semibold mb-2">Master Thesis</h3>
+          <p class="text-gray-700 mb-4">“Screening and Application of Novel Phages for Targeting Zoonotic Salmonella”</p>
+          <a href="/thesis" class="text-blue-600 hover:underline">Read More</a>
+        </div>
+
+        <div class="bg-white shadow-md rounded-lg p-6 text-left">
+          <h3 class="text-xl font-semibold mb-2">Bari, S., Hossen, M., Islam, M., & Helal, M. (2024)</h3>
+          <p class="text-gray-700 mb-4">
+            Genome-wide identification and characterization of interleukin-18 gene family in rainbow trout (Oncorhynchus mykiss). 
+            <i>Journal of Advanced Biotechnology and Experimental Therapeutics</i>, 7(2), 275. 
+            <a href="https://www.ejmanager.com/mnstemps/178/178-1701606596.pdf?t=1755579566" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">DOI: 10.5455/jabet.2024.d23</a>
+          </p>
+        </div>
+
+        <div class="bg-white shadow-md rounded-lg p-6 text-left">
+          <h3 class="text-xl font-semibold mb-2">Hossen, M., Mostafa, F., Jahan, N., Ferdaus, J., Albahi, A., & Bari, S. (2024)</h3>
+          <p class="text-gray-700 mb-4">
+            Structural and Functional Annotation of Hypothetical Protein of <i>Fusobacterium nucleatum</i> Strain MJR7757B: An in Silico Approach. 
+            <i>Computational Molecular Bioscience</i>, 14, 17-33. 
+            <a href="https://doi.org/10.4236/cmb.2024.141002" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">DOI: 10.4236/cmb.2024.141002</a>
+          </p>
+        </div>
+
+        <!-- Add rest of your publication cards similarly -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-white py-16 px-6 md:px-12 lg:px-24">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
+      <p class="mb-8 text-gray-700">If you'd like to collaborate, ask a question, or just say hello — feel free to drop a message!</p>
+      <form class="space-y-6" method="POST" action="#">
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required
+          class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          required
+          class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="Your Message"
+          required
+          class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        ></textarea>
+        <button
+          type="submit"
+          class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors duration-300"
+        >
+          Send Message
+        </button>
+      </form>
+
+      <div class="mt-12 text-gray-700 space-y-2">
+        <p><strong>Email:</strong> israfil.crp@gmail.com</p>
+        <p><strong>WhatsApp:</strong> +8801701008300</p>
+        <p>
+          
+          <a href="https://www.linkedin.com/in/isrfil-hossen-6b0493135" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">
+            linkedin
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript for Language Switching -->
+  <script>
+    document.getElementById('language-switcher').addEventListener('change', function () {
+      var lang = this.value;
+
+      document.getElementById('home-content-en').classList.add('hidden');
+      document.getElementById('home-content-bn').classList.add('hidden');
+      document.getElementById('home-content-zh').classList.add('hidden');
+
+      if (lang === 'en') {
+        document.getElementById('home-content-en').classList.remove('hidden');
+      } else if (lang === 'bn') {
+        document.getElementById('home-content-bn').classList.remove('hidden');
+      } else if (lang === 'zh') {
+        document.getElementById('home-content-zh').classList.remove('hidden');
+      }
+    });
+  </script>
+
+</body>
+</html>
