@@ -25,6 +25,9 @@
   <!-- AOS (Animate on Scroll) Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
   <!-- Favicon -->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
@@ -46,6 +49,38 @@
       backdrop-filter: blur(10px);
       box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     }
+    /* Modal styles */
+    .modal {
+        transition: opacity 0.25s ease;
+    }
+    /* Timeline styles */
+    .timeline-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 3px;
+        height: 100%;
+        background-color: #d1d5db; /* gray-300 */
+    }
+    /* On mobile, move the timeline line to the left */
+    @media (max-width: 767px) {
+        .timeline-container::before {
+            left: 20px;
+        }
+    }
+    .skill-card ul {
+        list-style-position: inside;
+        padding-left: 0.5rem;
+    }
+    .skill-card ul li {
+        margin-bottom: 0.5rem;
+    }
+    .skill-card ul ul {
+        padding-left: 1.5rem;
+        list-style-type: circle;
+    }
   </style>
 </head>
 <body class="text-gray-800">
@@ -56,6 +91,8 @@
       <a href="#home" class="text-2xl font-bold text-white" data-lang="nav_brand">Israfil H.</a>
       <nav class="hidden md:flex items-center space-x-8">
         <a href="#about" class="text-white hover:text-teal-300 transition-colors" data-lang="nav_about">About</a>
+        <a href="#qualifications" class="text-white hover:text-teal-300 transition-colors" data-lang="nav_qualifications">Qualifications</a>
+        <a href="#skills" class="text-white hover:text-teal-300 transition-colors" data-lang="nav_skills">Skills</a>
         <a href="#projects" class="text-white hover:text-teal-300 transition-colors" data-lang="nav_projects">Publications</a>
         <a href="#contact" class="text-white hover:text-teal-300 transition-colors" data-lang="nav_contact">Contact</a>
       </nav>
@@ -105,6 +142,174 @@
         </p>
       </div>
     </section>
+    
+    <!-- Academic Qualifications Section -->
+    <section id="qualifications" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6 max-w-4xl text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up" data-lang="qualifications_title">Academic Qualifications</h2>
+        <div class="w-20 h-1 bg-teal-500 mx-auto mb-12" data-aos="fade-up" data-aos-delay="100"></div>
+        
+        <div class="relative mt-12 timeline-container">
+            <!-- Timeline Item 1: PhD -->
+            <div class="relative mb-8" data-aos="fade-up">
+                <div class="md:flex items-center md:justify-end md:space-x-8">
+                    <div class="md:w-1/2"></div>
+                    <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 md:relative md:left-0 md:translate-x-0 w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center text-white">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="bg-white shadow-lg rounded-lg p-6 md:w-1/2 text-left ml-12 md:ml-0">
+                        <h3 class="text-xl font-bold text-gray-800">PhD in Plant Nutrition (Soil Science)</h3>
+                        <p class="text-gray-600 mt-2">University of China Academy of Science, China</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 2: MS -->
+            <div class="relative mb-8" data-aos="fade-up">
+                <div class="md:flex items-center md:flex-row-reverse md:justify-end md:space-x-8 md:space-x-reverse">
+                    <div class="md:w-1/2"></div>
+                    <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 md:relative md:left-0 md:translate-x-0 w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center text-white">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="bg-white shadow-lg rounded-lg p-6 md:w-1/2 text-left ml-12 md:ml-0 md:text-right">
+                        <h3 class="text-xl font-bold text-gray-800">MS in Food Science and Technology (Microbiology)</h3>
+                        <p class="text-gray-600 mt-2">Huazhong Agricultural University, China</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 3: Bachelor -->
+            <div class="relative mb-8" data-aos="fade-up">
+                <div class="md:flex items-center md:justify-end md:space-x-8">
+                    <div class="md:w-1/2"></div>
+                    <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 md:relative md:left-0 md:translate-x-0 w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center text-white">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="bg-white shadow-lg rounded-lg p-6 md:w-1/2 text-left ml-12 md:ml-0">
+                        <h3 class="text-xl font-bold text-gray-800">Bachelor of Science in Agriculture</h3>
+                        <p class="text-gray-600 mt-2">University of Rajshahi, Bangladesh</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 4: HSC -->
+            <div class="relative mb-8" data-aos="fade-up">
+                <div class="md:flex items-center md:flex-row-reverse md:justify-end md:space-x-8 md:space-x-reverse">
+                    <div class="md:w-1/2"></div>
+                    <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 md:relative md:left-0 md:translate-x-0 w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center text-white">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="bg-white shadow-lg rounded-lg p-6 md:w-1/2 text-left ml-12 md:ml-0 md:text-right">
+                        <h3 class="text-xl font-bold text-gray-800">Higher Secondary Certificate</h3>
+                        <p class="text-gray-600 mt-2">Varendra Collage, Rajshahi, Bangladesh</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Timeline Item 5: SSC -->
+            <div class="relative" data-aos="fade-up">
+                <div class="md:flex items-center md:justify-end md:space-x-8">
+                    <div class="md:w-1/2"></div>
+                    <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 md:relative md:left-0 md:translate-x-0 w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center text-white">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="bg-white shadow-lg rounded-lg p-6 md:w-1/2 text-left ml-12 md:ml-0">
+                        <h3 class="text-xl font-bold text-gray-800">Secondary School Certificate</h3>
+                        <p class="text-gray-600 mt-2">Saranjai High School, Rajshahi, Bangladesh</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-6xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up" data-lang="skills_title">Professional Skills</h2>
+            <div class="w-20 h-1 bg-teal-500 mx-auto mb-12" data-aos="fade-up" data-aos-delay="100"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                <!-- Bioinformatics Card -->
+                <div class="bg-white shadow-lg rounded-lg p-6 transform hover:-translate-y-2 transition-transform duration-300 skill-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-dna text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Bioinformatics Analysis</h3>
+                    </div>
+                    <ul class="text-gray-600 list-disc">
+                        <li>Array data, Whole-genome resequencing, RNA-Seq data</li>
+                        <li>Basic statistical analysis (ANOVA, Correlation, etc.)</li>
+                        <li>PCA analysis (Heatmap)</li>
+                        <li>Genome-Wide Association Analysis</li>
+                        <li>Transcriptomics Analysis</li>
+                        <li>Molecular docking (Protein-ligand, Protein-protein)</li>
+                    </ul>
+                </div>
+
+                <!-- Software Card -->
+                <div class="bg-white shadow-lg rounded-lg p-6 transform hover:-translate-y-2 transition-transform duration-300 skill-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-cogs text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Software</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        <strong>Analysis:</strong> R, sickle, SPAdes, PLINK, VCF tools, HISAT2, Samtools, Featurecounts, Stringtie, etc.
+                        <br><br>
+                        <strong>Visualization & Other:</strong> MEGA 11, iTOL, Cytoscape, Chimera, Pymol, Autodock, QGIS, Adobe Illustrator, Photoshop.
+                    </p>
+                </div>
+
+                <!-- Lab Work Card -->
+                <div class="bg-white shadow-lg rounded-lg p-6 transform hover:-translate-y-2 transition-transform duration-300 skill-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-flask text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Molecular Lab Work</h3>
+                    </div>
+                    <ul class="text-gray-600 list-disc">
+                        <li>Bacterial and Virus (Bacteriophage) isolation, culture, purification, and storage.</li>
+                        <li>DNA extraction, PCR amplification, and gel documentation.</li>
+                        <li>Morphological and Genomic characterization of Bacteriophage.</li>
+                    </ul>
+                </div>
+
+                <!-- Command Language Card -->
+                <div class="bg-white shadow-lg rounded-lg p-6 transform hover:-translate-y-2 transition-transform duration-300 skill-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-terminal text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Command Language</h3>
+                    </div>
+                    <ul class="text-gray-600 list-disc">
+                        <li>R</li>
+                        <li>Linux</li>
+                        <li>Python (Basic)</li>
+                    </ul>
+                </div>
+                
+                <!-- Language Proficiency Card -->
+                <div class="bg-white shadow-lg rounded-lg p-6 transform hover:-translate-y-2 transition-transform duration-300 skill-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-language text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Language Proficiency</h3>
+                    </div>
+                    <ul class="text-gray-600 list-disc">
+                        <li><strong>English:</strong> Advanced</li>
+                        <li><strong>Chinese:</strong> HSK 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Projects/Publications Section -->
     <section id="projects" class="py-20 bg-gray-50">
@@ -117,14 +322,14 @@
           <div class="bg-white shadow-lg rounded-lg p-6 text-left transform hover:-translate-y-2 transition-transform duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="200">
             <h3 class="text-xl font-bold mb-2" data-lang="project1_title">Master Thesis</h3>
             <p class="text-gray-700 mb-4 flex-grow">“Screening and Application of Novel Phages for Targeting Zoonotic Salmonella”</p>
-            <a href="#" class="text-teal-600 hover:underline font-semibold mt-auto" data-lang="project_read_more">Read More &rarr;</a>
+            <button id="open-thesis-modal" class="text-teal-600 hover:underline font-semibold mt-auto text-left" data-lang="project_read_more">Read More &rarr;</button>
           </div>
 
           <!-- Publication Card 2 -->
           <div class="bg-white shadow-lg rounded-lg p-6 text-left transform hover:-translate-y-2 transition-transform duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="300">
             <h3 class="text-xl font-bold mb-2">Bari, S., Hossen, M., et al. (2024)</h3>
             <p class="text-gray-700 mb-4 flex-grow">Genome-wide identification and characterization of interleukin-18 gene family in rainbow trout (Oncorhynchus mykiss).</p>
-            <a href="https://www.ejmanager.com/mnstemps/178/178-1701606596.pdf?t=1755579566" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:underline font-semibold mt-auto">View Publication &rarr;</a>
+            <a href="https://doi.org/10.1046/j.1365-3083.2000.00836.x" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:underline font-semibold mt-auto">View Publication &rarr;</a>
           </div>
 
           <!-- Publication Card 3 -->
@@ -136,23 +341,30 @@
           
           <!-- Publication Card 4 -->
           <div class="bg-white shadow-lg rounded-lg p-6 text-left transform hover:-translate-y-2 transition-transform duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="text-xl font-bold mb-2">Another Publication (Year)</h3>
-            <p class="text-gray-700 mb-4 flex-grow">Title of the research paper goes here. This is a brief description of the study and its findings.</p>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:underline font-semibold mt-auto">View Publication &rarr;</a>
+            <h3 class="text-xl font-bold mb-2">Islam, M. S., Yang, X., et al. (2021)</h3>
+            <p class="text-gray-700 mb-4 flex-grow">Application of a novel phage ZPAH7 for controlling multidrug-resistant Aeromonas hydrophila on lettuce and reducing biofilms.</p>
+            <a href="https://doi.org/10.1016/j.foodcont.2020.107785" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:underline font-semibold mt-auto">View Publication &rarr;</a>
           </div>
           
           <!-- Publication Card 5 -->
           <div class="bg-white shadow-lg rounded-lg p-6 text-left transform hover:-translate-y-2 transition-transform duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="300">
-            <h3 class="text-xl font-bold mb-2">More Research (Year)</h3>
-            <p class="text-gray-700 mb-4 flex-grow">This card can hold another one of your significant research publications. Describe the key points here.</p>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:underline font-semibold mt-auto">View Publication &rarr;</a>
+            <h3 class="text-xl font-bold mb-2">Azad, M. A. K., Islam, M. S., et al. (2019)</h3>
+            <p class="text-gray-700 mb-4 flex-grow">Yield and Fruit Quality of Tomato as Influenced by Calcium and Mulching in Rooftop Cultivation.</p>
+            <a href="https://doi.org/10.4236/as.2019.107068" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:underline font-semibold mt-auto">View Publication &rarr;</a>
           </div>
           
           <!-- Publication Card 6 -->
           <div class="bg-white shadow-lg rounded-lg p-6 text-left transform hover:-translate-y-2 transition-transform duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="400">
-            <h3 class="text-xl font-bold mb-2">Final Example (Year)</h3>
-            <p class="text-gray-700 mb-4 flex-grow">A placeholder for another publication. You can easily duplicate these cards to add as many as you need.</p>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:underline font-semibold mt-auto">View Publication &rarr;</a>
+            <h3 class="text-xl font-bold mb-2">Azad, M. A. K., Khatun, Z., et al. (2020)</h3>
+            <p class="text-gray-700 mb-4 flex-grow">Generation of Virus Free Potato Plantlets through Meristem Culture and Their Field Evaluation.</p>
+            <a href="https://doi.org/10.4236/ajps.2020.1111131" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:underline font-semibold mt-auto">View Publication &rarr;</a>
+          </div>
+
+          <!-- Publication Card 7 -->
+          <div class="bg-white shadow-lg rounded-lg p-6 text-left transform hover:-translate-y-2 transition-transform duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="text-xl font-bold mb-2">Azad, M. A. K., Hossen, M. I., et al. (2018)</h3>
+            <p class="text-gray-700 mb-4 flex-grow">Integrated Effects of Irrigation Interval and Calcium Nutrient on Growth and Yield of Tomato in Pot Cultivation.</p>
+            <a href="https://www.researchgate.net/publication/333972238" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:underline font-semibold mt-auto">View Publication &rarr;</a>
           </div>
 
         </div>
@@ -167,7 +379,8 @@
         <p class="text-lg text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="200" data-lang="contact_intro">
           If you'd like to collaborate, ask a question, or just say hello — feel free to drop a message!
         </p>
-        <form class="space-y-6 text-left" method="POST" action="#" data-aos="fade-up" data-aos-delay="300">
+        <!-- Form action updated with your Formspree link -->
+        <form class="space-y-6 text-left" method="POST" action="https://formspree.io/f/xeozbqjq" data-aos="fade-up" data-aos-delay="300">
           <div>
             <label for="name" class="block text-sm font-medium text-gray-700" data-lang="form_name_label">Your Name</label>
             <input type="text" id="name" name="name" required class="mt-1 w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-shadow">
@@ -187,14 +400,22 @@
           </div>
         </form>
 
-        <div class="mt-12 text-gray-700 space-y-2" data-aos="fade-up" data-aos-delay="400">
-          <p><strong>Email:</strong> israfil.crp@gmail.com</p>
-          <p><strong>WhatsApp:</strong> +8801701008300</p>
-          <p>
-            <a href="https://www.linkedin.com/in/isrfil-hossen-6b0493135" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:underline font-semibold">
-              LinkedIn Profile
+        <div class="mt-12 text-gray-700" data-aos="fade-up" data-aos-delay="400">
+          <p class="mb-4" data-lang="contact_direct">Or connect with me directly:</p>
+          <div class="flex justify-center items-center space-x-6">
+            <a href="mailto:israfil.crp@gmail.com" class="text-teal-600 hover:text-teal-800 transition-colors" title="Email">
+                <i class="fas fa-envelope text-3xl"></i>
             </a>
-          </p>
+            <a href="https://wa.me/8801701008300" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:text-teal-800 transition-colors" title="WhatsApp">
+                <i class="fab fa-whatsapp text-3xl"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/israfilcst" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:text-teal-800 transition-colors" title="LinkedIn">
+              <i class="fab fa-linkedin text-3xl"></i>
+            </a>
+            <a href="https://scholar.google.com/citations?hl=en&user=Ur3Vus4AAAAJ" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:text-teal-800 transition-colors" title="Google Scholar">
+              <i class="fas fa-graduation-cap text-3xl"></i>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -203,9 +424,29 @@
   <!-- Footer -->
   <footer class="bg-gray-800 text-white py-6">
     <div class="container mx-auto px-6 text-center">
-      <p>&copy; 2025 Israfil Hossen. All Rights Reserved.</p>
+      <p>&copy; 2024 Israfil Hossen. All Rights Reserved.</p>
     </div>
   </footer>
+
+  <!-- Thesis Abstract Modal -->
+  <div id="thesis-modal" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 p-4 hidden">
+    <div class="bg-white rounded-lg shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto" data-aos="fade-up">
+        <div class="sticky top-0 bg-white border-b p-4 flex justify-between items-center">
+            <h2 class="text-2xl font-bold text-gray-800">Master Thesis Abstract</h2>
+            <button id="close-thesis-modal" class="text-gray-500 hover:text-gray-800 text-3xl">&times;</button>
+        </div>
+        <div class="p-6 md:p-8 text-left space-y-4 text-gray-700 leading-relaxed">
+            <p>Food safety, a global priority, is based on reducing the ongoing risk of food-borne pathogens. Among these, Salmonella stands out as one of the major adversaries, continuously demanding attention from food science researchers. Its impact resonates globally, causing significant illness and imposing an economic burden. This challenge intensifies with the emergence of antibiotic and disinfectant-resistant strains, highlighting the urgent need for novel control strategies. Phages are naturally occurring bacterial predators with immense potential. While their efficacy against bacteria like Salmonella is promising, understanding their interactions remains limited. This thesis delves into this gap by comprehensively characterizing three Salmonella phages through phenotypic and genomic analysis, also elucidating their interactions with various Salmonella host strains. The following aspects were studied in this thesis.</p>
+            <p><strong>Phage screening for biocontrol potential:</strong> In order to explore the potential of phages to combat Salmonella contamination in food safety settings, 190 laboratory-preserved Salmonella phages were first screened for host range and lytic activity against diverse Salmonella strains using phage typing methods. Initially, a rigorous screening process was conducted to evaluate the lytic performance and host range of three phages named LPSP56, LPST100, and LPSC20, respectively.</p>
+            <p><strong>Biological characterization of potent phages:</strong> Transmission electron microscopy (TEM) imaging revealed distinct morphological features for each phage. Analysis of their one-step growth kinetics indicated that LPSP56 and LPSC20 had latent periods of 20 minutes, while LPST100 required 40 minutes. The burst sizes were determined to be 220±20 PFU/cell for LPSP56, 420±20 PFU/cell for LPST100, and 150±30 PFU/cell for LPSC20. These findings collectively suggested a short incubation period coupled with high lytic potential for all three phages. Additionally, the phages exhibited stability across a wide range of pH values (4-11) and temperatures (30°C-60°C), indicating their potential adaptability to various food storage or processing conditions.</p>
+            <p><strong>The bactericidal effects of a phage cocktail on Salmonella in food:</strong> The phage cocktail exhibited remarkable efficacy in reducing Salmonella levels in chicken meat and lettuce, with significant decreases observed at the multiplicity of infection (MOI) of 100 and MOI of 1000 within 12 hours of treatment at both 4°C and 25°C. Specifically, the cocktail achieved maximum effectiveness at an MOI of 1000, resulting in 50% and 73% reduction in Salmonella counts on meat and lettuce, respectively. Notably, at 4°C, the phage cocktail demonstrated a pronounced reduction in bacterial counts, indicating its potential as a food safety enhancer. These findings underscore the potential of phage cocktails in effectively controlling zoonotic Salmonella in food systems and their application in food safety measures.</p>
+            <p><strong>Genomic insights into safe and diverse biocontrol agents:</strong> Whole-genome sequencing of the three isolated phages, LPSP56, LPST100, and LPSC20, provided valuable insights into their biocontrol potential. Notably, none of the phages harbored genes associated with virulence, antibiotic resistance, or integration into bacterial hosts, solidifying their safety for biocontrol applications. Cluster analysis of phage species revealed significant diversity among them, highlighting the vast potential in the phage world. This diversity is further supported by whole-genome sequencing, which identified LPSP56 and LPSC20 as belonging to the Guernseyvirinae subfamily and LPST100 to the Ackermannviridae family. To further classify these phages, a phylogenetic tree was constructed based on the major capsid protein (MCP) sequences. By comparing homologous proteins with a similarity threshold of over 40% and utilizing the intergenomic distance calculator (VIRIDIC), LPSP56 and LPST100 were identified as novel phage species belonging to the Jerseyvirus and Kuttervirus genera, respectively.</p>
+            <p>This study successfully identified and characterized three promising phages (LPSP56, LPST100, and LPSC20) with significant potential for controlling Salmonella contamination in food. These phages exhibited broad host range, strong lytic activity, good thermal and pH stability, and efficient reduction of Salmonella levels in chicken meat and lettuce. Furthermore, genomic analysis confirmed their safety for biocontrol applications and revealed their remarkable diversity, including the discovery of two novel phage species. These findings pave the way for the development of novel and safe phage-based interventions to enhance food safety and combat the potential threat of zoonotic Salmonella pathogens.</p>
+            <p><strong>Keywords:</strong> Zoonotic Salmonella, Phages, Phage Cocktail, Host spectrum, Food safety.</p>
+        </div>
+    </div>
+  </div>
+
 
   <!-- AOS (Animate on Scroll) Library -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -230,6 +471,27 @@
           navbar.classList.remove('nav-scrolled');
         }
       });
+      
+      // --- Modal Logic ---
+      const thesisModal = document.getElementById('thesis-modal');
+      const openModalBtn = document.getElementById('open-thesis-modal');
+      const closeModalBtn = document.getElementById('close-thesis-modal');
+
+      openModalBtn.addEventListener('click', () => {
+          thesisModal.classList.remove('hidden');
+      });
+
+      closeModalBtn.addEventListener('click', () => {
+          thesisModal.classList.add('hidden');
+      });
+
+      // Close modal if clicking outside the content
+      thesisModal.addEventListener('click', (event) => {
+        if (event.target === thesisModal) {
+            thesisModal.classList.add('hidden');
+        }
+      });
+
 
       // --- Language Switching Logic ---
       const translations = {
@@ -239,6 +501,8 @@
           // Nav
           nav_brand: "Israfil H.",
           nav_about: "About",
+          nav_qualifications: "Qualifications",
+          nav_skills: "Skills",
           nav_projects: "Publications",
           nav_contact: "Contact",
           // Home
@@ -253,6 +517,10 @@
           about_p1_part2: "My research centers on the intricate relationships between soil health, plant nutrition, and microbial interactions, aiming to develop innovative solutions to enhance crop productivity and promote food security on a global scale.",
           about_p2_part1: "With a deep interest in bioinformatics and molecular biology, I utilize cutting-edge technologies to investigate genomic, transcriptomic, and microbial data, driving insights that inform more sustainable agricultural systems.",
           about_p2_part2: "By combining my interdisciplinary expertise with rigorous experimentation, I strive to contribute valuable knowledge that can transform agricultural practices and improve global food production, all while minimizing environmental impact.",
+          // Qualifications
+          qualifications_title: "Academic Qualifications",
+          // Skills
+          skills_title: "Professional Skills",
           // Projects
           projects_title: "My Research Publications",
           project1_title: "Master Thesis",
@@ -260,6 +528,7 @@
           // Contact
           contact_title: "Get In Touch",
           contact_intro: "If you'd like to collaborate, ask a question, or just say hello — feel free to drop a message!",
+          contact_direct: "Or connect with me directly:",
           form_name_label: "Your Name",
           form_email_label: "Your Email",
           form_message_label: "Your Message",
@@ -271,6 +540,8 @@
           // Nav
           nav_brand: "ইসরাফিল হো.",
           nav_about: "সম্পর্কে",
+          nav_qualifications: "শিক্ষাগত যোগ্যতা",
+          nav_skills: "দক্ষতা",
           nav_projects: "প্রকাশনা",
           nav_contact: "যোগাযোগ",
           // Home
@@ -281,10 +552,14 @@
           home_button: "আরও জানুন",
           // About
           about_title: "আমার সম্পর্কে",
-          about_p1_part1: "আমি <strong>ইসরাফিল হোসেন</strong>, একজন উৎসাহী এবং নিবেদিত গবেষক, যার একটি শক্তিশালী একাডেমিক ভিত্তি রয়েছে এবং টেকসই কৃষি পদ্ধতির অগ্রগতিতে আমি নিবদ্ধ। আমি চায়না একাডেমি অফ সায়েন্স বিশ্ববিদ্যালয় (ইউসিএএস) থেকে উদ্ভিদ পুষ্টি (মৃত্তিকা বিজ্ঞান) বিষয়ে পিএইচডি, খাদ্য বিজ্ঞান ও প্রযুক্তি (মাইক্রোবায়োলজি) বিষয়ে এমএস এবং কৃষিতে বিজ্ঞানে স্নাতক ডিগ্রি অর্জন করেছি।",
+          about_p1_part1: "আমি <strong>ইসরাফিল হোসেন</strong>, একজন উৎসাহী এবং নিবেদিত গবেষক, যার একটি শক্তিশালী একাডেমিক ভিত্তি রয়েছে এবং টেকসই কৃষি পদ্ধতির অগ্রগতিতে আমি নিবদ্ধ। আমি চায়না একাডিমি অফ সায়েন্স বিশ্ববিদ্যালয় (ইউসিএএস) থেকে উদ্ভিদ পুষ্টি (মৃত্তিকা বিজ্ঞান) বিষয়ে পিএইচডি, খাদ্য বিজ্ঞান ও প্রযুক্তি (মাইক্রোবায়োলজি) বিষয়ে এমএস এবং কৃষিতে বিজ্ঞানে স্নাতক ডিগ্রি অর্জন করেছি।",
           about_p1_part2: "আমার গবেষণা মৃত্তিকার স্বাস্থ্য, উদ্ভিদ পুষ্টি এবং জীবাণুঘটিত পারস্পরিক সম্পর্কের জটিলতার উপর কেন্দ্র করে, যার লক্ষ্য বিশ্বব্যাপী ফসলের উৎপাদনশীলতা বৃদ্ধি এবং খাদ্য নিরাপত্তা উন্নীত করার জন্য উদ্ভাবনী সমাধান তৈরি করা।",
           about_p2_part1: "বায়োইনফরমেটিক্স এবং মলিকুলার বায়োলজিতে গভীর আগ্রহ নিয়ে, আমি জেনোমিক, ট্রান্সক্রিপ্টোমিক এবং মাইক্রোবিয়াল ডেটা তদন্ত করতে অত্যাধুনিক প্রযুক্তি ব্যবহার করি, যা আরও টেকসই কৃষি ব্যবস্থা সম্পর্কে অন্তর্দৃষ্টি প্রদান করে।",
           about_p2_part2: "আমার আন্তঃবিভাগীয় দক্ষতার সাথে কঠোর পরীক্ষামূলক পদ্ধতির সমন্বয় করে, আমি মূল্যবান জ্ঞান প্রদানে সচেষ্ট, যা কৃষি পদ্ধতিকে রূপান্তরিত করতে এবং বিশ্বব্যাপী খাদ্য উৎপাদন উন্নত করতে পারে, একই সাথে পরিবেশগত প্রভাব হ্রাস করে।",
+          // Qualifications
+          qualifications_title: "একাডেমিক যোগ্যতা",
+          // Skills
+          skills_title: "পেশাগত দক্ষতা",
           // Projects
           projects_title: "আমার গবেষণা প্রকাশনা",
           project1_title: "মাস্টার থিসিস",
@@ -292,6 +567,7 @@
           // Contact
           contact_title: "যোগাযোগ করুন",
           contact_intro: "আপনি যদি সহযোগিতা করতে, কোনো প্রশ্ন করতে বা শুধু হ্যালো বলতে চান — তাহলে নির্দ্বিধায় একটি বার্তা দিন!",
+          contact_direct: "অথবা সরাসরি আমার সাথে সংযোগ করুন:",
           form_name_label: "আপনার নাম",
           form_email_label: "আপনার ইমেইল",
           form_message_label: "আপনার বার্তা",
@@ -303,6 +579,8 @@
           // Nav
           nav_brand: "伊斯রাফিল·侯",
           nav_about: "关于我",
+          nav_qualifications: "学术资格",
+          nav_skills: "专业技能",
           nav_projects: "研究出版物",
           nav_contact: "联系方式",
           // Home
@@ -317,6 +595,10 @@
           about_p1_part2: "我的研究聚焦于土壤健康、植物营养和微生物相互作用之间错综复杂的关系，旨在开发创新解决方案，以提高作物生产力并促进全球范围内的粮食安全。",
           about_p2_part1: "凭借对生物信息学和分子生物学的浓厚兴趣，我利用尖端技术研究基因组、转录组和微生物数据，从而为更可持续的农业系统提供深刻见解。",
           about_p2_part2: "通过将我的跨学科专业知识与严谨的实验相结合，我努力贡献宝贵的知识，以期转变农业实践，改善全球粮食生产，同时最大限度地减少对环境的影响。",
+          // Qualifications
+          qualifications_title: "学术资格",
+          // Skills
+          skills_title: "专业技能",
           // Projects
           projects_title: "我的研究出版物",
           project1_title: "硕士论文",
@@ -324,6 +606,7 @@
           // Contact
           contact_title: "联系我",
           contact_intro: "如果您想合作、提问或只是打个招呼——请随时留言！",
+          contact_direct: "或者直接与我联系:",
           form_name_label: "您的姓名",
           form_email_label: "您的电子邮件",
           form_message_label: "您的留言",
